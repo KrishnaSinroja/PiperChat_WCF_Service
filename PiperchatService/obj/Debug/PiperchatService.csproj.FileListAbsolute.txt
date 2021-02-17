@@ -1,0 +1,7 @@
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Test Project\PiperChat_WCF_Service\PiperchatService\PiperchatService\bin\Debug\PiperchatService.dll.config
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Test Project\PiperChat_WCF_Service\PiperchatService\PiperchatService\bin\Debug\PiperchatService.dll
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Test Project\PiperChat_WCF_Service\PiperchatService\PiperchatService\bin\Debug\PiperchatService.pdb
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Test Project\PiperChat_WCF_Service\PiperchatService\PiperchatService\obj\Debug\PiperchatService.csprojAssemblyReference.cache
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Test Project\PiperChat_WCF_Service\PiperchatService\PiperchatService\obj\Debug\PiperchatService.csproj.CoreCompileInputs.cache
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Test Project\PiperChat_WCF_Service\PiperchatService\PiperchatService\obj\Debug\PiperchatService.dll
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Test Project\PiperChat_WCF_Service\PiperchatService\PiperchatService\obj\Debug\PiperchatService.pdb
