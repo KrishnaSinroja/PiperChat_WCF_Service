@@ -27,18 +27,23 @@ namespace PiperchatService.Service
         {
             _callback = OperationContext.Current.GetCallbackChannel<IMessageServiceCallback>();
 
-            if(_callback != null)
+            if(_callback != null && !_clients.ContainsKey(user.UserId))
             {
+
                 _clients.Add(user.UserId, _callback);
                 _activeUsers.Add(user);
                 _clients?.ToList().ForEach(client => client.Value.UsersConnected(_activeUsers));
+                Console.WriteLine("Client connected = " + user.Username);
             }
+           
            
         }
 
         public void SendMessage(Message message)
         {
+            Console.WriteLine("MessageReceived = " + message.MessageSent + " from user id" + message.SenderId);
             IMessageServiceCallback receiverCallBack = _clients?.First(client => client.Key == message.ReceiverId).Value;
+        
             receiverCallBack?.ForwardToClient(message);
         }
 

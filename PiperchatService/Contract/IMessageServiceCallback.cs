@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ServiceModel;
 
+
 namespace PiperchatService.Contract
 {
     [ServiceContract()]
