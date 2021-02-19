@@ -19,3 +19,13 @@ D:\College\Sem 6\SOC\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost
 D:\College\Sem 6\SOC\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.csproj.CopyComplete
 D:\College\Sem 6\SOC\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.exe
 D:\College\Sem 6\SOC\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.pdb
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\bin\Debug\PiperchatHost.exe.config
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\bin\Debug\PiperchatHost.exe
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\bin\Debug\PiperchatHost.pdb
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\bin\Debug\PiperchatService.dll
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\bin\Debug\PiperchatService.pdb
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.csprojAssemblyReference.cache
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.csproj.CoreCompileInputs.cache
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.csproj.CopyComplete
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.exe
+E:\DDU Study\Semester 6\SOC\Project\WCF Project\Cloned\PiperChat_WCF_Service\PiperchatHost\obj\Debug\PiperchatHost.pdb
