@@ -15,6 +15,16 @@ namespace PiperchatService.Models
         public int UserId { get; set; }
         [DataMember]
         public string Username { get; set; }
+
+        [DataMember]
+        public string Name { get; set; }
+
+        [DataMember]
+        public string Email { get; set; }
+
+        [DataMember]
+        public string Password { get; set; }
+
         [DataMember]
         public ObservableCollection<Message> UserMessages { get; set; }
     }
