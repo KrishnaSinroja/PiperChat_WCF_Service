@@ -13,8 +13,6 @@ namespace PiperchatService.Models
     {
         [DataMember]
         public int UserId { get; set; }
-        [DataMember]
-        public string Username { get; set; }
 
         [DataMember]
         public string Name { get; set; }
@@ -26,6 +24,13 @@ namespace PiperchatService.Models
         public string Password { get; set; }
 
         [DataMember]
-        public ObservableCollection<Message> UserMessages { get; set; }
+        public string Location { get; set; }
+
+        [DataMember]
+        public string About { get; set; }
+
+        [DataMember]
+        public string ContactNo { get; set; }
+
     }
 }

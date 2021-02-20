@@ -160,5 +160,10 @@ namespace PiperchatService.Service
             return response;
             
         }
+
+        User IUserService.Validate(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
