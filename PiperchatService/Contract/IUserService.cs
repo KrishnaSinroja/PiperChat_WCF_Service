@@ -31,5 +31,7 @@ namespace PiperchatService.Contract
         [OperationContract]
         DataSet GetAllUserRecords();
 
+        [OperationContract]
+        string Validate(string email, string password);
     }
 }

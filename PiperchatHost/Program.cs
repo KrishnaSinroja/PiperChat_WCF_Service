@@ -10,7 +10,7 @@ namespace PiperchatHost
     {
         static void Main(string[] args)
         {
-            using (ServiceHost host=new ServiceHost(typeof(PiperchatService.Service.MessageService)))
+            using (ServiceHost host=new ServiceHost(typeof(PiperchatService.Service.UserService)))
             {
                 host.Open();
                 Console.WriteLine("Host started @ " + DateTime.Now.ToString());
