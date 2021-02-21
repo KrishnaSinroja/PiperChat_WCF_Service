@@ -21,5 +21,9 @@ namespace PiperchatService.Contract
         [OperationContract(IsOneWay = false)]
         ObservableCollection<User> GetConnectedUsers();
 
+        [OperationContract]
+        void Disconnect(User user);
+
+
     }
 }

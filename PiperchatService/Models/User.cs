@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,6 +32,9 @@ namespace PiperchatService.Models
 
         [DataMember]
         public string ContactNo { get; set; }
+
+        [DataMember]
+        public RSAParameters PublicKey { get; set; }
 
     }
 }

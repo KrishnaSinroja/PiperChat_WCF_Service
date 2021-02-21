@@ -18,6 +18,7 @@ namespace PiperchatService.Service
         private IMessageServiceCallback _callback = null;
         private ObservableCollection<User> _activeUsers;
         private Dictionary<int, IMessageServiceCallback> _clients;
+
         string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PiperChatDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public MessageService()
         {
@@ -40,6 +41,7 @@ namespace PiperchatService.Service
 
         public void SendMessage(Message message)
         {
+            InsertMessage(message);
             IMessageServiceCallback receiverCallBack = _clients?.First(client => client.Key == message.ReceiverId).Value;
             receiverCallBack?.ForwardToClient(message);
         }
@@ -81,6 +83,22 @@ namespace PiperchatService.Service
                 response = "Error " + e;
             }
             return response;
+        }
+
+        private void InsertMessage(Message message)
+        {
+            string query = "INSERT INTO dbo.Message(SenderId,ReceiverId,message,messgaeTime) values(@SenderId,@ReceiverId,@message,@messageTime)";
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            //cmd.Parameters.AddWithValue("@UserId", user.UserId);
+            cmd.Parameters.AddWithValue("@SenderId",message.SenderId);
+            cmd.Parameters.AddWithValue("@ReceiverId", message.ReceiverId);
+            cmd.Parameters.AddWithValue("@message", message.MessageSent);
+            cmd.Parameters.AddWithValue("@messageTime", message.TimeSent);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         public string UpdateUserRecord(User user)
@@ -195,5 +213,18 @@ namespace PiperchatService.Service
             return user;
         }
 
+        public void Disconnect(User user)
+        {
+            _callback = OperationContext.Current.GetCallbackChannel<IMessageServiceCallback>();
+
+            if (_callback != null)
+            {
+                _clients.Remove(user.UserId);
+                //_clients.Add(user.UserId, _callback);
+                //_activeUsers.Add(user);
+                _activeUsers.Remove(_activeUsers.First(us => us.UserId == user.UserId));
+                _clients?.ToList().ForEach(client => client.Value.UsersConnected(_activeUsers));
+            }
+        }
     }
 }
