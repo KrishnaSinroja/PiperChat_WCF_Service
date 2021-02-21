@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,8 +14,6 @@ namespace PiperchatService.Models
     {
         [DataMember]
         public int UserId { get; set; }
-        [DataMember]
-        public string Username { get; set; }
 
         [DataMember]
         public string Name { get; set; }
@@ -26,6 +25,16 @@ namespace PiperchatService.Models
         public string Password { get; set; }
 
         [DataMember]
-        public ObservableCollection<Message> UserMessages { get; set; }
+        public string Location { get; set; }
+
+        [DataMember]
+        public string About { get; set; }
+
+        [DataMember]
+        public string ContactNo { get; set; }
+
+        [DataMember]
+        public RSAParameters PublicKey { get; set; }
+
     }
 }
